@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1a191f;
+}
+
+.next-btn{
+    position: absolute;
+    right: 50px;
+    bottom:100px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    z-index: 99;
+}
+
+.background img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background img:nth-child(1){
+    z-index: 2;
+    clip-path: inset(0px 0% 0 0);
+}
+
+.background img:nth-child(2){
+    clip-path: inset(0px 0% 0 0);
+    z-index: 1;
+}
+
+.background img:nth-child(3){
+    clip-path: inset(0px 0% 0 0);
+}

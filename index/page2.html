@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page2</title>
+    <link rel="stylesheet" href="./css/page2.css">
+</head>
+
+<body>
+    <div class="background">
+        <img class="img1" src="./image/img2.jpg" alt="">
+        <img class="img2" src="./image/img4.jpg" alt="">
+        <img class="img3" src="./image/img3.jpg" alt="">
+    </div>
+    <a href="./page3.html" class="next-btn">
+        Next
+    </a>
+    <script>
+        let i = 0;
+        let y = 0;
+        document.addEventListener("DOMContentLoaded", function () {
+            const firstImage = document.querySelector('.img1');
+            const img2 = document.querySelector('.img2');
+            firstImage.style.clipPath = `inset(0px 0% 0 0)`;
+            img2.style.clipPath = `circle(0% at 50% 50%)`;
+            
+            function animate() {
+                i += 0.5;
+                console.log(i);
+                firstImage.style.clipPath = `inset(0px ${i}% 0 0)`;
+                if (i < 100) {
+                    requestAnimationFrame(animate);
+                }
+                if (i >= 100) {
+                    requestAnimationFrame(animate1);
+                }
+            }
+
+            function animate1() {
+                y += 0.5;
+                console.log(y);
+                img2.style.clipPath = `circle(${y}% at 50% 50%)`;
+                if (y < 100) {
+                    requestAnimationFrame(animate1);
+                }
+            }
+            
+            requestAnimationFrame(animate);
+        });
+    </script>
+</body>
+
+</html>
