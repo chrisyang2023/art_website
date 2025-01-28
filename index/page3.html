@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Choose Your World</title>
@@ -44,19 +43,17 @@
         }
 
         @keyframes floatText {
-
             0%,
             100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-20px);
             }
         }
 
         #bgOne {
-            background-image: url('./image/img5.jpg');
+            background-image: url('image/img5.jpg');
             cursor: pointer;
         }
 
@@ -80,28 +77,21 @@
         }
 
         .model {
-            /* position: absolute;
-            top: 40%;
-            left: 50%; */
             width: 120%;
             height: 40%;
-            /* transform: translateX(-50%) translateY(-50%); */
             animation: floatText 3s ease-in-out infinite;
         }
 
         #island {
             width: 100%;
-            /* margin: auto; */
             height: 100%;
         }
 
         @keyframes floatIsland {
-
             0%,
             100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-20px);
             }
@@ -117,36 +107,34 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="backgrounds">
         <div id="bgOne" class="bg"></div>
-        <div id="bgTwo" class="bg" style="background-image: url('./image/img6.jpg');"></div>
-        <div id="bgThree" class="bg" style="background-image: url('./image/img7.jpg');"></div>
+        <div id="bgTwo" class="bg" style="background-image: url('image/img6.jpg');"></div>
+        <div id="bgThree" class="bg" style="background-image: url('image/img7.jpg');"></div>
     </div>
 
     <div class="floating-text">Choose the world you want to go to!</div>
 
     <div id="worldOne">
-        <img id="island" src="./image/img5.jpg" alt="Floating Island">
+        <img id="island" src="image/img5.jpg" alt="Floating Island">
         <div class="model-box">
-            <img class="model" src="./image/img3.png" alt="">
+            <img class="model" src="image/img3.png" alt="">
             <div class="reselect">Reselect</div>
         </div>
     </div>
 
     <script>
         document.getElementById('bgOne').addEventListener('click', function () {
-            updateIslandImage('./image/img5.jpg'); 
+            updateIslandImage('image/img5.jpg'); 
         });
 
         document.getElementById('bgTwo').addEventListener('click', function () {
-            updateIslandImage('./image/img6.jpg'); 
+            updateIslandImage('image/img6.jpg'); 
         });
 
         document.getElementById('bgThree').addEventListener('click', function () {
-            updateIslandImage('./image/img7.jpg'); 
+            updateIslandImage('image/img7.jpg'); 
         });
 
         function updateIslandImage(imageUrl) {
@@ -162,7 +150,5 @@
             document.getElementById('worldOne').style.display = 'none';
         })
     </script>
-
 </body>
-
 </html>
